@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>document</title>
+
+    <!-- Bootstrap link -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css"
+      integrity="sha384-dpuaG1suU0eT09tx5plTaGMLBsfDLzUCCUXOY2j/LSvXYuG6Bqs43ALlhIqAJVRb"
+      crossorigin="anonymous"
+    />
+
+    <!-- swiper link -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- Css link-->
+
+    <link rel="stylesheet" href="CSS/Style.css" />
+  </head>
+  <body id="body">
+    <!-- spinner -->
+    <div id="loadPageContainer">
+      <div class="spinner-border" role="status" id="loadPage">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+
+    <!-- container -->
+    <div id="container">
+      <!-- header -->
+
+      <header id="header">
+        <div id="topHeader">
+          <div class="right">
+            <div class="mobileRemove"><a href="#">کاربران خانگی</a></div>
+            <div class="mobileRemove"><a href="#">کاربران سازمانی</a></div>
+
+            <!-- mobile menu -->
+            <!-- mobile menu -->
+            <!-- mobile menu -->
+
+            <div id="showMobileMenu">
+              <a href="#" id="openMenu" onclick="openMobileMenu()">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="25"
+                  height="25"
+                  fill="#fff"
+                  class="bi bi-list"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+                  />
+                </svg>
+              </a>
+              <a href="#" id="closeMenu" onclick="closeMobileMenu()">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="25"
+                  height="25"
+                  fill="#fff"
+                  class="bi bi-x-lg"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- item mobile menu -->
+
+          <div id="menuContainer">
+            <ul>
+              <li><a href="#">خدمات اینترنت پر سرعت</a></li>
+              <li><a href="#">خدمات تلفن</a></li>
+              <li><a href="#">خدمات همراه</a></li>
+              <li><a href="#">خدمات محتوا</a></li>
+              <li><a href="#">خرید آنلاین سرویس اینترنت</a></li>
+              <li><a href="#">پشتیبانی</a></li>
+              <li><a href="#">چرا شاتل</a></li>
+              <li><a href="#">راهکار های سازمانی</a></li>
+              <li><a href="#">درباره شاتل</a></li>
+              <li><a href="#">فرصت های شغلی</a></li>
+              <li><a href="#">ارتباط با ما</a></li>
+              <li><a href="#">English</a></li>
+            </ul>
+          </div>
+
+          <div class="left">
+            <div class="mobileRemove"><a href="#">درباره شاتل</a></div>
+            <div class="mobileRemove"><a href="#">فرصت های شغلی</a></div>
+            <div class="mobileRemove"><a href="#">ارتباط با ما</a></div>
+            <div>
+              <a href="#">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="#fff"
+                  class="bi bi-telephone-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"
+                  />
+                </svg>
+                شماره سراسری ۹۱۰۰۰۰۰۰ (۰۲۱)
+              </a>
+            </div>
+            <div class="mobileRemove"><a href="#">English</a></div>
+          </div>
+        </div>
+      </header>
+
+      <!-- navbar -->
+      <nav id="nav">
+        <div class="navContainer" class="mobileRemove">
+          <!-- nav right -->
+
+          <div class="right" class="mobileRemove">
+            <!-- subMenu1 -->
+            <div>
+              <a
+                href="#"
+                onmouseover="showSubMenu1() "
+                onmouseleave="RemoveSubMenu1()"
+                class="mobileRemove"
+                >محصولات و خدمات</a
+              >
+
+              <div
+                class="subMenu"
+                id="subMenu1"
+                onmouseleave="RemoveSubMenu1()"
+                onmouseover="showSubMenu1() "
+                class="mobileRemove"
+              >
+                <div class="listMenu">
+                  <div class="headerList">
+                    <a href="#">خدمات اینترنت پر سرعت </a>
+                  </div>
+
+                  <div class="subLine"></div>
+                  <div class="menuItem"><a href="#">اینترنت فیبر نوری</a></div>
+                  <div class="menuItem"><a href="#"> ADSL2+ </a></div>
+                  <div class="menuItem"><a href="#"> VDSL </a></div>
+                  <div class="menuItem">
+                    <a href="#"> مجتمع های مسکونی و تجاری </a>
+                  </div>
+                </div>
+
+                <div class="listMenu">
+                  <div class="headerList">
+                    <a href="#">خدمات تلفن </a>
+                  </div>
+
+                  <div class="subLine"></div>
+                  <div class="menuItem"><a href="#"> خدمات تلفن خانگی </a></div>
+                </div>
+
+                <div class="listMenu">
+                  <div class="headerList">
+                    <a href="#">خدمات همراه </a>
+                  </div>
+
+                  <div class="subLine"></div>
+                  <div class="menuItem"><a href="#"> شاتل موبایل </a></div>
+                  <div class="menuItem"><a href="#"> FMC+ </a></div>
+                </div>
+
+                <div class="listMenu">
+                  <div class="headerList">
+                    <a href="#">خدمات محتوا </a>
+                  </div>
+
+                  <div class="subLine"></div>
+                  <div class="menuItem"><a href="#"> نماوا </a></div>
+                </div>
+              </div>
+            </div>
+            <!-- subMenu2 -->
+            <div>
+              <a
+                href="#"
+                onmouseover=" showSubMenu2()"
+                onmouseleave="RemoveSubMenu2()"
+                class="mobileRemove"
+                >پشتیبانی</a
+              >
+
+              <div
+                class="subMenu"
+                id="subMenu2"
+                onmouseover=" showSubMenu2()"
+                onmouseleave="RemoveSubMenu2()"
+              >
+                <div class="listMenu">
+                  <div class="menuItem">
+                    <a href="#"> راهنمای استفاده از خدمات و پشتیبانی </a>
+                  </div>
+                  <div class="menuItem">
+                    <a href="#"> سیستم هوشمند پشتیبانی فنی </a>
+                  </div>
+                  <div class="menuItem">
+                    <a href="#"> مرکز دانلود</a>
+                  </div>
+                  <div class="menuItem">
+                    <a href="#"> درخواست SLA </a>
+                  </div>
+                </div>
+
+                <div class="listMenu">
+                  <div class="menuItem">
+                    <a href="#"> تست سرعت</a>
+                  </div>
+                  <div class="menuItem">
+                    <a href="#"> محتوای آموزشی</a>
+                  </div>
+                  <div class="menuItem">
+                    <a href="#"> اپلیکیشن مای شاتل </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div><a href="#" class="mobileRemove">چرا شاتل؟</a></div>
+          </div>
+
+          <!-- nav left -->
+          <div class="left">
+            <!-- change theme  -->
+
+            <div id="changeThemeBtn" onclick="setCookie()">
+              <!-- light -->
+              <a href="#" id="lightLogo" onclick="darkMode()">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="25"
+                  height="25"
+                  fill="#000"
+                  class="bi bi-brightness-high"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"
+                  />
+                </svg>
+              </a>
+
+              <!-- dark -->
+
+              <a href="#" id="darkLogo" onclick="lightMode()">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="25"
+                  height="25"
+                  fill="#fff"
+                  class="bi bi-moon"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278M4.858 1.311A7.27 7.27 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.32 7.32 0 0 0 5.205-2.162q-.506.063-1.029.063c-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286"
+                  />
+                </svg>
+              </a>
+            </div>
+
+            <!-- end of theme btn -->
+
+            <a href="#" id="searchLogo" onclick="showSearchBox()">
+              <svg
+                id="searchLogoSvg"
+                xmlns="http://www.w3.org/2000/svg"
+                width="25"
+                height="25"
+                fill="#000"
+                class="bi bi-search"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+                />
+              </svg>
+            </a>
+
+            <!-- login -->
+
+            <a href="#" id="loginBtn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="25"
+                height="25"
+                fill="#fff"
+                class="bi bi-person"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"
+                />
+              </svg>
+
+              ورود به مای شاتل
+            </a>
+          </div>
+        </div>
+      </nav>
+
+      <!-- section -->
+      <main>
+        <!-- s1 -->
+
+        <div id="s1">
+          <div
+            class="slideshow-container"
+            onmouseover="stopSlide()"
+            onmouseleave="resumeSlide()"
+          >
+            <div class="mySlides fade">
+              <a href="#">
+                <img src="MEDIA/IMAGE/s1-1.webp" style="width: 100%"
+              /></a>
+            </div>
+
+            <div class="mySlides fade">
+              <a href="#">
+                <img src="MEDIA/IMAGE/s1-2.webp" style="width: 100%"
+              /></a>
+            </div>
+
+            <div class="mySlides fade">
+              <a href="#">
+                <img src="MEDIA/IMAGE/s1-3.webp" style="width: 100%"
+              /></a>
+            </div>
+
+            <div class="mySlides fade">
+              <a href="#">
+                <img src="MEDIA/IMAGE/s1-4.webp" style="width: 100%"
+              /></a>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+          </div>
+          <br />
+
+          <div style="text-align: center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+          </div>
+        </div>
+
+        <!-- s2 -->
+
+        <div id="s2">
+          <h2>لبخندتان را به دنیا نمیدهیم!</h2>
+          <p>
+            شاتل با ارائه خدمات و راهکارهای ارتباطی و محتوایی ارزش‌آفرین و
+            نوآورانه و نیز پای‌بندی به اخلاق حرفه‌ای و مسئولیت‌های اجتماعی،
+            رسالت خود را خلق لبخند رضایت در جامعه می‌داند.
+          </p>
+
+          <div class="container">
+            <a href="#">
+              <div>
+                <img src="MEDIA/IMAGE/s2-1.webp" alt="" />
+              </div>
+
+              <h3>خدمات اینترنت پر سرعت ثابت</h3>
+
+              <p>بهترین راهکار برای دستیابی به اینترنت ثابت</p>
+            </a>
+
+            <a href="#">
+              <div>
+                <img src="MEDIA/IMAGE/s2-2.webp" alt="" />
+              </div>
+
+              <h3>خدمات تلفن ثابت</h3>
+
+              <p>نسل جدید تلفن با ویژگی های منحصر به فرد</p>
+            </a>
+
+            <a href="#">
+              <div>
+                <img src="MEDIA/IMAGE/s2-3.webp" alt="" />
+              </div>
+
+              <h3>سیم کارت هوشمند شاتل موبایل</h3>
+
+              <p>
+                تنها اپراتور ارائه دهنده سیم کارت هوشمند ب خدمات مکالمه ،پیامک و
+                اینترنت 4G/LTE
+              </p>
+            </a>
+
+            <a href="#">
+              <div>
+                <img src="MEDIA/IMAGE/s2-4.webp" alt="" />
+              </div>
+
+              <h3>تماشای آنلاین فیلم و سریال (نماوا)</h3>
+
+              <p>خلق یک تجربه لذت بخش آنلاین</p>
+            </a>
+
+            <a href="#">
+              <div>
+                <img src="MEDIA/IMAGE/s2-5.webp" alt="" />
+              </div>
+
+              <h3>خدمات مجتمع های مسکونی و تجاری</h3>
+
+              <p>
+                سرویس مجتمع های مسکونی و تجاری راهی مطمعن برای دسترسی به اینترنت
+                و برقراری ارتباط
+              </p>
+            </a>
+
+            <a href="#">
+              <div>
+                <img src="MEDIA/IMAGE/s2-6.webp" alt="" />
+              </div>
+
+              <h3>خدمات همگرایی ثابت و سیار</h3>
+
+              <p>تنها سرویس ترکیبی همگرای موبایل و ADSL2+</p>
+            </a>
+          </div>
+        </div>
+
+        <!-- s3 -->
+
+        <div id="s3">
+          <div class="container">
+            <a href="#">
+              <div>
+                <img src="MEDIA/IMAGE/s3-1.webp" alt="" />
+              </div>
+
+              <h3>خرید آنلاین</h3>
+            </a>
+
+            <a href="#">
+              <div>
+                <img src="MEDIA/IMAGE/s3-2.webp" alt="" />
+              </div>
+
+              <h3>قیمت سرویس ها</h3>
+            </a>
+
+            <a href="#">
+              <div>
+                <img src="MEDIA/IMAGE/s3-3.webp" alt="" />
+              </div>
+
+              <h3>بررسی پوشش خدمات</h3>
+            </a>
+
+            <a href="#">
+              <div>
+                <img src="MEDIA/IMAGE/s3-4.webp" alt="" />
+              </div>
+
+              <h3>باشگاه مشتریان</h3>
+            </a>
+          </div>
+        </div>
+
+        <!-- s4 -->
+
+        <div id="s4">
+          <div class="top container">
+            <div class="right">
+              <h2>اینترنت فیبر نوری شاتل</h2>
+              <span>تجربه تا ۱,۰۰۰ مگابیت بر ثانیه سرعت</span>
+              <p>
+                سرویس اینترنت فیبر نوری یکی از جدیدترین فناوری‌های ارتباطات ثابت
+                است که در آن برای دسترسی به شبکه جهانی اینترنت به جای کابل مسی
+                از نور برای انتقال اطلاعات استفاده می‌شود، بنابراین نویزهای
+                الکترومغناطیسی تاثیری بر روی کیفیت و پایداری این سرویس ندارد.
+                کیفیت بالا، عدم نیاز به خط تلفن ثابت و سرعت ارسال و دریافت تا
+                ۱۰۰۰ مگابیت بر ثانیه از مهم‌ترین مزایای سرویس اینترنت بر بستر
+                فیبر نوری است. شاتل همگام با تکنولوژی روز دنیا اقدام به
+                راه‌اندازی و توسعه بستر ارائه این سرویس در شبکه خود داشته است.
+              </p>
+
+              <a href="#">اطلاعات بیشتر</a>
+            </div>
+            <div class="left">
+              <img src="MEDIA/IMAGE/s4-1.webp" alt="" />
+            </div>
+          </div>
+
+          <div class="bottom container">
+            <div class="right">
+              <img src="MEDIA/IMAGE/s4-2.webp" alt="" />
+            </div>
+
+            <div class="left">
+              <h2>خدمات اینترنت پرسرعت ثابت VDSL</h2>
+              <span
+                >بالاترین سرعت، با مناسب‌‌ترین هزینه برای کاربران خانگی</span
+              >
+              <p>
+                در این روش می‌توانید اینترنت پرسرعت را با سرعت متوسط ۷۰ مگابیت
+                بر ثانیه، با قیمتی به مراتب ارزان‌تر از ADSL دریافت کنید. این
+                سرویس هم برای کاربران خانگی و هم برای کسب‌وکارها مورد استفاده
+                قرار می‌گیرد.
+                <br />
+                <br />
+                شاتل ارائه خدمات اینترنت پرسرعت بر بستر FTTC را برای نخستین بار
+                در کشور آغاز کرده است.
+              </p>
+
+              <a href="#">اطلاعات بیشتر</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- s5 -->
+
+        <div id="s5">
+          <h2 style="color: #fff">پیشنهادها</h2>
+          <div class="clearfix"></div>
+
+          <!-- Swiper -->
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <!-- item1 -->
+              <div class="swiper-slide">
+                <div class="itemCd">
+                  <p class="rotateHeader">نماوا</p>
+
+                  <div class="mainSwiper">
+                    <div class="swipeImg">
+                      <img src="MEDIA/IMAGE/s5-1.webp" alt="" />
+                    </div>
+                    <div class="swipeContent">
+                      <h2>
+                        تماشای فیلم سریال در نماوا با ترافیک رایگان حتی در صورت
+                        اتمام ترافیک یا قطع سرویس
+                      </h2>
+
+                      <p>
+                        شاتلی ها حتی در زمان قطعی سرویس اینترنت ب دلیل اتمام
+                        ترافیک یا دوره سرویس نیز میتوانند با ترافیک رایگان در
+                        نماوا فیلم و سریال تماشا کنند.
+                      </p>
+
+                      <a href="#">بیشتر بخوانید</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- item 2 -->
+
+              <div class="swiper-slide">
+                <div class="itemCd">
+                  <p class="rotateHeader">پیشنهاد ویژه</p>
+
+                  <div class="mainSwiper">
+                    <div class="swipeImg">
+                      <img src="MEDIA/IMAGE/s5-2.webp" alt="" />
+                    </div>
+                    <div class="swipeContent">
+                      <h2>اینترنت پرسرعت شاتل این بار در دیجی کالا</h2>
+
+                      <p>
+                        شاتل که همواره به دنبال ارائه شیوه‌های نوین در دسترسی
+                        کاربران به سرویس اینترنت پرسرعت بوده، با ارائه بسته‌های
+                        سرویس اینترنت ویژه در ...
+                      </p>
+
+                      <a href="#">بیشتر بخوانید</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- item3 -->
+              <div class="swiper-slide">
+                <div class="itemCd">
+                  <p class="rotateHeader">جشنواره الکامپ</p>
+
+                  <div class="mainSwiper">
+                    <div class="swipeImg">
+                      <img src="MEDIA/IMAGE/s5-3.webp" alt="" />
+                    </div>
+                    <div class="swipeContent">
+                      <h2>
+                        پیشنهاد‌های جذاب شاتل به‌مناسبت حضور در نمایشگاه الکامپ
+                      </h2>
+
+                      <p>
+                        شاتل در جشنواره ویژه نمایشگاه الکامپ امسال، یک فرصت ویژه
+                        برای شاتلی شدن و خرید اینترنت پرسرعت ثابت با ترافیک
+                        بین‌الملل را برای مشتریان فراهم کرده است.
+                      </p>
+
+                      <a href="#">بیشتر بخوانید</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <!-- item 4 -->
+
+                <div class="itemCd">
+                  <p class="rotateHeader">جشنواره ترافیک</p>
+
+                  <div class="mainSwiper">
+                    <div class="swipeImg">
+                      <img src="MEDIA/IMAGE/s5-4.webp" alt="" />
+                    </div>
+                    <div class="swipeContent">
+                      <h2>
+                        پیشنهادهای ویژه بسته‌های ترافیکی شاتل؛ به‌مناسبت حضور در
+                        نمایشگاه الکامپ
+                      </h2>
+
+                      <p>
+                        بسته‌های ۲۰ و ۱۲۰ گیگابایتی ترافیک نقره‌ای اینترنت ثابت،
+                        علاوه بر پیشنهاد منحصربه‌فرد شاتل برای هر کاربر، با
+                        تخفیف‌ ویژه از ۴ تا ۱۲ تیر ۱۴۰۳ در سراسر کشور ارائه
+                        می‌شود.
+                      </p>
+
+                      <a href="#">بیشتر بخوانید</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+            <div class="autoplay-progress">
+              <svg viewBox="0 0 48 48">
+                <circle cx="24" cy="24" r="20"></circle>
+              </svg>
+              <span></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- s6 -->
+
+        <div id="s6">
+          <div class="container">
+            <h2>اخبار و تازه‌ها</h2>
+
+            <div id="row">
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="13"
+                  height="13"
+                  fill="currentColor"
+                  class="bi bi-calendar4-week"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M2 2a1 1 0 0 0-1 1v1h14V3a1 1 0 0 0-1-1zm13 3H1v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1z"
+                  />
+                  <path
+                    d="M11 7.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-2 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5z"
+                  />
+                </svg>
+                <span> یکشنبه، ۱۰ تیر ۱۴۰۳</span>
+
+                <br /><br />
+
+                <h3>نشست خبری با حضور مدیران گروه شرکت‌های شاتل</h3>
+                <br />
+
+                <p>
+                  روز ۱۰ تیرماه، در دومین روز از بیست‌وهفتمین نمایشگاه الکامپ،
+                  نشست خبری با حضور محمدحسن شانه‌ساززاده، رئیس هیئت مدیره شاتل،
+                  حسین میرطاووسی، عضو هیئت مدیره نماوا و آرش کریم‌بیگی مدیرعامل
+                  شاتل‌موبایل در غرفه شاتل برگزار شد. حسن شانه‌ساززاده در این
+                  نشست، هدف اصلی از حضور شاتل در نمایشگاه الکامپ را پس از ۱۸
+                  سال، معرفی ...
+                </p>
+
+                <br />
+
+                <a href="#"> بیشتر بخوانید</a>
+              </div>
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="13"
+                  height="13"
+                  fill="currentColor"
+                  class="bi bi-calendar4-week"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M2 2a1 1 0 0 0-1 1v1h14V3a1 1 0 0 0-1-1zm13 3H1v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1z"
+                  />
+                  <path
+                    d="M11 7.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-2 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5z"
+                  />
+                </svg>
+                <span>دوشنبه، ۱۱ تیر ۱۴۰۳</span>
+
+                <br /><br />
+
+                <h3>امضای تفاهم‌‌نامه همکاری میان «شاتل» و «تهران‌سرور»</h3>
+                <br />
+
+                <p>
+                  روز ۱۰ تیرماه، در حاشیه دومین روز از بیست‌وهفتمین نمایشگاه
+                  الکامپ، تفاهم همکاری میان شرکت «شاتل» و «تهران‌سرور» امضا شد.
+                  در این مراسم که با حضور رضا غلامی، مدیر ارشد فروش راهکارهای
+                  سازمانی شاتل، فرجاد محمدی، رئیس هیئت‌مدیره تهران‌سرور و بردیا
+                  بازرگان، عضو هیئت‌مدیره این شرکت در غرفه شاتل برگزار شد،
+                  قرارداد ارائه خدمات کولوکیشن ...
+                </p>
+
+                <br />
+
+                <a href="#"> بیشتر بخوانید</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- end of sections -->
+
+      <!-- footer -->
+
+      <footer id="footer">
+        <div class="container">
+          <div class="topFooter">
+            <div class="right">
+              <ul>
+                <li><a href="#">ارتباط با ما</a></li>
+                <li><a href="#">فرصت های شغلی </a></li>
+                <li><a href="#">نمایندگان فروش</a></li>
+                <li><a href="#">سوالات متداول</a></li>
+              </ul>
+
+              <ul>
+                <li><a href="#">اخبار</a></li>
+                <li><a href="#">صدای مشتری</a></li>
+                <li><a href="#">مناقصه ها و مزایده ها</a></li>
+                <li><a href="#">سامانه رضایت سنجی</a></li>
+              </ul>
+            </div>
+
+            <div class="left">
+              <a href="#"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="25"
+                  height="25"
+                  fill="#fff"
+                  class="bi bi-instagram"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"
+                  /></svg
+              ></a>
+
+              <a href="#">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                  width="25"
+                  height="25"
+                  fill="#fff"
+                >
+                  <path
+                    d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z"
+                  /></svg
+              ></a>
+
+              <a href="#"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
+                  width="25"
+                  height="25"
+                  fill="#fff"
+                >
+                  <path
+                    d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"
+                  /></svg
+              ></a>
+
+              <a href="#"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="25"
+                  height="25"
+                  fill="#fff"
+                  viewBox="0 0 32 32"
+                  width="32"
+                >
+                  <path
+                    d="m29.919 6.163-4.225 19.925c-.319 1.406-1.15 1.756-2.331 1.094l-6.438-4.744-3.106 2.988c-.344.344-.631.631-1.294.631l.463-6.556 11.931-10.781c.519-.462-.113-.719-.806-.256l-14.75 9.288-6.35-1.988c-1.381-.431-1.406-1.381.288-2.044l24.837-9.569c1.15-.431 2.156.256 1.781 2.013z"
+                  /></svg
+              ></a>
+            </div>
+          </div>
+          <div class="bottomFooter">
+            <div>
+              ۱۴۰۳ - کلیه حقوق مالکیت معنوی این وب‌سایت به گروه فناوری ارتباطات
+              و اطلاعات شاتل تعلق دارد.
+            </div>
+
+            <div>طراح :‌ متین ایوبی</div>
+
+            <div>
+              شماره پروانه: ۱۱-۱۳۰-۱۰۰ | سامانه ۱۹۵
+              <img src="MEDIA/IMAGE/bottom-footer.webp" alt="" />
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- search box -->
+    <div id="searchContainer" onclick="removeSearchBox()"></div>
+    <div id="searchBox">
+      <a onclick="removeSearchBox()" href="#" id="closeIcon"
+        ><svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          class="bi bi-x-lg"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"
+          /></svg
+      ></a>
+
+      <div class="text">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="25"
+          height="25"
+          fill="#000"
+          class="bi bi-search"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+          />
+        </svg>
+
+        کلمه مورد نظر را وارد کنید و نتایچ را بررسی کنید
+      </div>
+
+      <div class="form-floating mb-3">
+        <input
+          type="text"
+          class="form-control"
+          id="floatingInput"
+          placeholder=""
+        />
+        <label for="floatingInput">کلمه مورد نظر را اینجا وارد کنید</label>
+      </div>
+      <button type="submit" id="searchBtn">جستجو</button>
+    </div>
+
+    <!-- swiper js -->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- bootstrap js -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+<<<<<<< HEAD
+
+    <!-- main js -->
+
+    <script src="JS/main.js?t=105"></script>
+=======
+    <script src="JS/main.js?t=88"></script>
+>>>>>>> 89b06688e16cb49f21a66c3e36b954f13fb56eaa
+  </body>
+</html>
